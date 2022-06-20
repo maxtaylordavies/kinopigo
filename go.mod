@@ -1,3 +1,3 @@
-module kinopigo
+module github.com/maxtaylordavies/kinopigo
 
 go 1.16
