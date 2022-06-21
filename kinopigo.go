@@ -44,6 +44,7 @@ func (kc *KinopigoClient) sendHTTPRequest(method string, path string, body inter
 	// create request
 	req, _ := http.NewRequest(method, fmt.Sprintf("%s/%s", kc.BaseURL, path), buffer)
 	req.Header.Set("Authorization", kc.Token)
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0")
 	if body != nil {
 		req.Header.Set("Content-Type", "application/json")
 	}
